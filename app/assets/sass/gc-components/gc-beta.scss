@@ -1,0 +1,28 @@
+.gc-beta-banner{
+    background:$gc-dark-blue;
+    color: govuk-colour("white");
+    @include govuk-font(16);
+    padding: 15px 0px;
+
+    .gc-beta-tag{
+        text-transform: uppercase;
+        text-decoration: none;
+        font-weight: normal;
+        padding: 6px 10px;
+        background:  $gc-orange;
+        color: $gc-dark-blue;
+        font-weight: bold;
+        margin-right: 10px;
+    }
+
+    a{
+        font-weight: 700;
+        color: govuk-colour("white");
+
+    }
+
+    a:focus{
+        color: govuk-colour("black");
+        
+    }
+}

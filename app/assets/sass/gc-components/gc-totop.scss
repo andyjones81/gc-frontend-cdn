@@ -1,0 +1,27 @@
+
+.gc-return-to-top {
+    padding: 8px 12px;
+    border: 1px solid govuk-colour("dark-grey");
+    background-image: url("/public/images/black-arrow-up.svg");
+    background-size: 18px 13px;
+    background-position: 10px center;
+    background-repeat: no-repeat;
+    padding-left: 36px;
+
+    a {
+        text-decoration: none;
+        @include govuk-font(16, $weight: bold);
+        color: govuk-colour("black")
+    }
+
+
+}
+
+.gc-return-to-top:hover {
+    background: govuk-colour("mid-grey");
+    background-image: url("/public/images/black-arrow-up.svg");
+    background-size: 18px 13px;
+    background-position: 10px center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}

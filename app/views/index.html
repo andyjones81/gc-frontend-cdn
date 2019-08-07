@@ -1,0 +1,79 @@
+
+{% extends "layout_hero.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        <ul class="register-themes">
+          <li class="register-theme"><a class="register-theme__link" href="#">
+              <h3 class="register-theme__heading govuk-heading-s">Prevention and education</h3>
+              <p class="register-theme__description govuk-body-s">Towards a collective and clear prevention plan
+                applying the right mix of interventions
+              </p>
+            </a></li>
+          <li class="register-theme"><a class="register-theme__link" href="#">
+              <h3 class="register-theme__heading govuk-heading-s">Treatment and support</h3>
+              <p class="register-theme__description govuk-body-s">Significant progress towards truly national
+                treatment and support options that meet the needs of current and future service users
+              </p>
+
+            </a></li>
+          <li class="register-theme"><a class="register-theme__link" href="#">
+              <h3 class="register-theme__heading govuk-heading-s">Regulation and oversight
+              </h3>
+              <p class="register-theme__description govuk-body-s">Widespread adoption of best practice through
+                regulatory frameworks
+              </p>
+            </a></li>
+          <li class="register-theme"><a class="register-theme__link" href="#">
+              <h3 class="register-theme__heading govuk-heading-s">
+                Collaboration</h3>
+              <p class="register-theme__description govuk-body-s">Actions by businesses and other key organisations
+                support the delivery of the strategy and the reduction of gambling harms</p>
+            </a></li>
+          <li class="register-theme"><a class="register-theme__link" href="#">
+              <h3 class="register-theme__heading govuk-heading-s">
+                Evaluation</h3>
+              <p class="register-theme__description govuk-body-s">To understand more about what works to reduce
+                gambling harms</p>
+            </a></li>
+          <li class="register-theme"><a class="register-theme__link" href="#">
+              <h3 class="register-theme__heading govuk-heading-s">
+                Research to inform action</h3>
+              <p class="register-theme__description govuk-body-s">To widen the research base and improve links between
+                research and policy</p>
+            </a></li>
+        </ul>
+
+      </div>
+      <div class="govuk-grid-column-one-third">
+        <div class="gc-secondary">
+        <h3 class="govuk-heading-m">News</h3>
+
+        <!-- {% for i in news.items %}
+
+        <div class="govuk-!-margin-bottom-3">
+            <h3 class="govuk-heading-s govuk-!-margin-bottom-1"> <a href="{{ i.fields.slug }}">
+                    {{i.fields.title}}</a></h3>
+            </a>
+            <p class="govuk-body-s gc-meta  govuk-!-margin-bottom-0">{{i.fields.publishedDateTime | date('DD MMMM YYYY')}}
+            </p>
+        </div>
+
+
+        {% endfor %} -->
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+{% endblock %}

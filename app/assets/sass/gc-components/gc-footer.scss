@@ -1,0 +1,21 @@
+.gc-footer {
+    background: govuk-colour("light-grey");
+    padding: 40px 0px 25px 0px
+}
+
+.gc-footer-top {
+    background: $gc-light-grey;
+    padding: 20px 0px;
+}
+
+
+
+
+.gc-return-to-top:focus,
+.gc-return-to-top:active {
+    outline: 2px solid $govuk-focus-colour;
+}
+
+.gc-footer-logo {
+    max-width: 200px;
+}
