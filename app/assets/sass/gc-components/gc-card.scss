@@ -5,6 +5,11 @@
       flex-wrap: wrap;
       margin-top: 0px;
       padding-top: 0px;
+      padding-inline-start: 0px;
+      -moz-padding-inline-start: 0px;
+      -webkit-padding-inline-start: 0px;
+      -khtml-padding-inline-start: 0px;
+      -o-padding-inline-start: 0px;
     }
   
     @supports (display: grid) {
