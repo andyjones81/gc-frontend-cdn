@@ -3,12 +3,12 @@ const router = express.Router()
 
 // Add your routes here - above the module.exports line
 
-const contentful = require('contentful')
+// const contentful = require('contentful')
 
-const client = contentful.createClient({
-  space: process.env.space,
-  accessToken: process.env.spaceapi
-})
+// const client = contentful.createClient({
+//   space: process.env.space,
+//   accessToken: process.env.spaceapi
+// })
 
 router.get('/', function (req, res) {
     // var news;
