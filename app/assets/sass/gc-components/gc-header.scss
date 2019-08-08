@@ -44,6 +44,14 @@
             max-width: 200px;
         }
 
+        .gc-header-logo a:focus {
+            outline: 0px solid transparent;
+            color: transparent;
+            background-color: transparent;
+            box-shadow: transparent;
+            text-decoration: none;
+        }
+
         .gc-header-content {
             margin-top: -10px;
             width: 70%;
