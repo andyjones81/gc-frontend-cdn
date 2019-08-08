@@ -43,6 +43,13 @@
   text-decoration:none;
   margin-bottom: 5px;
 }
+.gc-vertical-nav__section-item{
+  border-left:4px solid $govuk-border-colour;
+}
+
+.gc-vertical-nav__section-item:hover{
+  border-left:4px solid $govuk-link-hover-colour;
+}
 
 .gc-vertical-nav__link:focus{
   background:inherit;
@@ -56,7 +63,7 @@
 .gc-vertical-nav__link:hover{
   color: govuk-colour("blue");
   border-left-color: govuk-colour("blue");
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .gc-vertical-nav__section-item--current .gc-vertical-nav__link{
