@@ -65,10 +65,12 @@
         color: govuk-colour("white");
     }
 
-    .gc-header-service-name a:focus {
+ 
+}
+
+   a.gc-header-service-name:focus {
         color: govuk-colour("black");
     }
-}
 
     .govuk-header__navigation-item {
         color: govuk-colour("white");
