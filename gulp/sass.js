@@ -10,6 +10,7 @@ const sass = require('gulp-sass')
 const sourcemaps = require('gulp-sourcemaps')
 const path = require('path')
 const fs = require('fs')
+const cleanCSS = require('gulp-clean-css');
 
 const extensions = require('../lib/extensions/extensions')
 const config = require('./config.json')
@@ -26,8 +27,10 @@ gulp.task('sass', function () {
     .pipe(sourcemaps.init())
     .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
     .pipe(sourcemaps.write())
+    .pipe(cleanCSS({compatibility: 'ie8'}))
     .pipe(gulp.dest(config.paths.public + '/stylesheets/'))
 })
+
 
 gulp.task('sass-documentation', function () {
   return gulp.src(config.paths.docsAssets + '/sass/*.scss')

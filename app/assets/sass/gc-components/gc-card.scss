@@ -71,8 +71,8 @@
   }
   
   .register-theme__link {
-    background: #f8f8f8;
-    border: 1px solid #bfc1c3;
+    background:govuk-colour('light-grey');
+    border: 1px solid govuk-colour('dark-grey');
     box-sizing: border-box;
     display: block;
     height: 100%;
@@ -99,12 +99,13 @@
   .register-theme__description,
   .register-theme__count {
     pointer-events: none;
-    width: 100%
+    width: 100%;
+    color: govuk-colour('black');
     
   }
   
   .register-theme__heading {
-    color: #005ea5;
+    color: $govuk-link-colour;
     text-decoration: underline;    
     margin-bottom: 15px;
   }
