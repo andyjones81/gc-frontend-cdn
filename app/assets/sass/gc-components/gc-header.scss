@@ -64,6 +64,10 @@
         text-decoration: none;
         color: govuk-colour("white");
     }
+
+    .gc-header-service-name a:focus {
+        color: govuk-colour("black");
+    }
 }
 
     .govuk-header__navigation-item {
