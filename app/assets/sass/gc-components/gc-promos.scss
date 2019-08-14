@@ -88,7 +88,7 @@
   
   .gc-promo__description {
     color: govuk-colour('black');
-    @include govuk-font(16, $weight: bold);
+    @include govuk-font(16);
   }
   
   /* Promo size variant
