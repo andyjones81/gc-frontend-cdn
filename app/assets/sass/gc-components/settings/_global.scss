@@ -1,0 +1,91 @@
+// ==========================================================================
+// SETTINGS / #GLOBALS
+// ==========================================================================
+
+//
+// Fonts
+//
+// 1. Fallback fonts if Oxygen fails to load
+//
+
+@import url('https://fonts.googleapis.com/css?family=Oxygen:400,700&display=swap');
+
+$font-family: 'Oxygen', sans-serif;
+
+*{font-family: $font-family !important;}
+
+$gc-font: "Oxygen";
+$gc-font-fallback: Arial, Sans-serif; // [1] //
+$gc-font-family-print: sans-serif !default;
+$gc-font-bold: 600;
+$gc-font-normal: 400;
+$gc-font-light: 300;
+
+//
+// Font sizing and spacing
+//
+
+$gc-base-font-size: 16px !default;
+$gc-base-line-height: 24px !default;
+
+//
+// Icon default sizing
+//
+
+$gc-icon-size: 34px !default;
+
+//
+// Grid spacing
+//
+
+$gc-page-width: 960px;
+$gc-gutter: 32px;
+$gc-gutter-half: $gc-gutter / 2;
+
+//
+// Border sizes
+//
+
+$gc-border-width-inset-text: 12px !default;
+$gc-care-card-triangle-border: 16px !default;
+$gc-hero-content-triangle-border: 16px !default;
+$gc-hero-border: 1px !default;
+$gc-border-list-panel: 2px !default;
+$gc-border-list-panel-item: 1px !default;
+$gc-border-table-header-width: 2px !default;
+$gc-border-table-cell-width: 1px !default;
+
+//
+// Border radius
+//
+
+$gc-border-radius: 4px !default;
+
+//
+// Box shadow
+//
+
+$gc-box-shadow-spread: 4px !default;
+$gc-box-shadow-blur: 4px !default;
+$gc-box-shadow-link: 4px !default;
+$gc-box-details: 8px !default;
+$gc-box-expander: 4px !default;
+$gc-box-shadow-pagination: 16px !default;
+$gc-box-shadow-link: 4px !default;
+
+//
+// Header spacing
+//
+
+$gc-header-spacing: 20px;
+
+//
+// Form elements
+//
+
+$gc-border-width-form-element: 2px !default;
+$gc-border-width-form-element-error: 4px !default;
+$gc-focus-width: 4px !default;
+$gc-border-width: 4px !default;
+$gc-border-width-mobile: 4px !default;
+$gc-border-width-form-group-error: $gc-border-width !default;

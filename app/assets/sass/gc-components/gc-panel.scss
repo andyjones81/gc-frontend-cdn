@@ -1,0 +1,66 @@
+/* ==========================================================================
+   COMPONENTS / #PANEL
+   ========================================================================== */
+
+   .gc-panel {
+    @include panel(govuk-colour('white'), govuk-colour('black'));
+    width: 100%;
+  }
+  
+  /* Panel colour variant
+     ========================================================================== */
+  
+  .gc-panel--grey {
+    background-color: govuk-colour('light-grey');
+  }
+  
+  /* Panel with label
+     ========================================================================== */
+  
+  .gc-panel-with-label {
+    @include panel-with-label(govuk-colour('white'), govuk-colour('black'));
+  }
+  
+  .gc-panel-with-label__label {
+    @include heading-label($gc-teal, govuk-colour('white'));
+    @include print-color(govuk-colour('black'));
+  }
+  
+  /* Panel group
+     ========================================================================== */
+  
+  /**
+   * Panel group allows you to have a row of panels.
+   *
+   * 1. Flexbox is used to make each panel in a row the same height.
+   */
+  
+  .gc-panel-group {
+    @include flex(); /* [1] */
+  
+    margin-bottom: gc-spacing(5);
+  
+    @include mq($until: desktop) {
+      margin-bottom: gc-spacing(4);
+    }
+  
+  }
+  
+  .gc-panel-group__item {
+    @include flex-item(); /* [1] */
+  
+    @include mq($until: desktop) {
+      margin-bottom: gc-spacing(4);
+  
+      &:last-child {
+        margin-bottom: 0;
+      }
+  
+    }
+  
+    .gc-panel {
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+  
+  }

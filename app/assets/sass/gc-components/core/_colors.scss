@@ -1,0 +1,155 @@
+// ==========================================================================
+// SETTINGS / #COLOURS
+// ==========================================================================
+
+//
+// NHS colour palette
+//
+// Colours are prefixed with color_ to make them easier to
+// search for within the code base.
+//
+// We also prefix them with gc- to prevent clashing with
+// other colours in existing code bases.
+//
+// We use the word color, not colour, for variables.
+//
+
+// sass-lint:disable no-color-hex
+
+$color_gc-blue: #005eb8;
+$color_gc-white: #ffffff;
+$color_gc-black: #212b32;
+$color_gc-green: #007f3b;
+$color_gc-red: #da291c;
+$color_gc-yellow: #ffeb3b;
+$color_gc-purple: #330072;
+
+//
+// Secondary colours
+//
+
+$color_gc-pale-yellow: #fff9c4;
+$color_gc-warm-yellow: #ffb81C;
+$color_gc-aqua-green: #00A499;
+
+//
+// Greyscale
+//
+
+$color_gc-grey-1: #425563;
+$color_gc-grey-2: #768692;
+$color_gc-grey-3: #aeb7bd;
+$color_gc-grey-4: #d8dde0;
+$color_gc-grey-5: #f0f4f5;
+
+
+//
+// RGB and alpha values
+//
+// Used to create drop/box shadows e.g. for search suggestions dropdown
+//
+
+$color_gc-grey-1-rgb: rgb(66, 84, 98);
+$alpha-transparency-50: .5;
+
+
+//
+// Functions for tint and shade
+//
+// Usage: tint(color, percentage)
+//        tint($color_gc-black, 10%)
+//        shade(color, percentage)
+//        shade($color_gc-blue, 50%)
+//
+
+@function tint($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
+
+@function shade($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}
+
+//
+// Primary colour variations
+//
+// 1. used for link :active states
+// 2. used for .is-active state on main navigation
+// 3. used for :hover states on main navigation
+// 4. used for :active states on main navigation
+// 5. used for primary button and action link icon :hover states
+// 6. used for primary button and action link icon :active states
+// 7. used for link :hover states
+// 8. used for link :active states
+//
+
+$color_tint_gc-black-10: tint($color_gc-black, 10%); // [1] //
+
+$color_shade_gc-blue-20: shade($color_gc-blue, 20%); // [2] //
+$color_shade_gc-blue-35: shade($color_gc-blue, 35%); // [3] //
+$color_shade_gc-blue-50: shade($color_gc-blue, 50%); // [4] //
+
+$color_shade_gc-green-35: shade($color_gc-green, 35%); // [5] //
+$color_shade_gc-green-50: shade($color_gc-green, 50%); // [6] //
+
+$color_tint_gc-warm-yellow-30: tint($color_gc-warm-yellow, 30%); // [7] //
+$color_tint_gc-warm-yellow-10: tint($color_gc-warm-yellow, 10%); // [8] //
+
+$color_transparent_gc-white-20: rgba($color_gc-white, .2);
+$color_transparent_gc-blue-50: rgba($color_shade_gc-blue-50, .1);
+
+//
+// Colour aliases
+//
+
+$gc-text-color: $color_gc-black;
+$gc-secondary-text-color: $color_gc-grey-1;
+$gc-print-text-color: $color_gc-black;
+
+$gc-link-color: $color_gc-blue;
+$gc-link-hover-color: $color_gc-black;
+$gc-link-focus-color: $color_gc-black;
+$gc-link-active-color: $color_tint_gc-black-10;
+$gc-link-visited-color: $color_gc-purple;
+$gc-link-hover-background-color: $color_tint_gc-warm-yellow-30;
+$gc-link-focus-background-color: $color_gc-warm-yellow;
+$gc-link-active-background-color: $color_tint_gc-warm-yellow-10;
+
+$gc-border-color: $color_gc-grey-4;
+$gc-secondary-border-color: $color_transparent_gc-white-20;
+$gc-box-shadow: rgba(33, 43, 50, .16);
+
+$gc-button-hover-color: $color_shade_gc-green-35;
+$gc-button-active-color: $color_shade_gc-green-50;
+$gc-secondary-button-hover-color: $color_shade_gc-blue-35;
+
+$gc-focus-color: $color_gc-warm-yellow;
+
+$gc-box-shadow-color: $color_gc-grey-1-rgb;
+
+//
+// Forms
+//
+
+$gc-error-color: $color_gc-red;
+$gc-form-border-color: $color_gc-grey-1;
+$gc-form-element-background-color: $color_gc-white;
+
+//
+// Buttons
+//
+
+$gc-button-colour: $color_gc-green;
+$gc-button-hover-colour: darken($gc-button-colour, 5%);
+$gc-button-shadow-colour: darken($gc-button-colour, 15%);
+
+$gc-secondary-button-colour: $color_gc-grey-1;
+$gc-secondary-button-hover-colour: darken($gc-secondary-button-colour, 5%);
+$gc-secondary-button-shadow-colour: darken($gc-secondary-button-colour, 15%);
+
+$gc-reverse-button-colour: $color_gc-white;
+$gc-reverse-button-hover-colour: darken($gc-reverse-button-colour, 5%);
+$gc-reverse-button-shadow-colour: $color_gc-black;
+
+$gc-button-text-colour: $color_gc-white;
+$gc-reverse-button-text-colour: $color_gc-black;

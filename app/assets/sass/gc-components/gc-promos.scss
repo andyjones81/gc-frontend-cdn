@@ -1,0 +1,150 @@
+/* ==========================================================================
+   COMPONENTS / #PROMO
+
+   Use for promo boxes, news items
+   ========================================================================== */
+
+/**
+ * 1. Extra margin is added to compensate for the box-shadow.
+ * 2. Box shadow size is set within settings/_global.scss.
+ * 3. Makes the <a> fill the height of it's parent container.
+ * 4. Is needed for the :active top positioning.
+ * 5. Removes default <a> text underline from all elements.
+ * 6. Adds text underline to promo heading.
+ * 7. Creates the 'pressed down' effect when clicked.
+ * 8. Border is used to create a divider between the white content box and an image.
+ */
+
+ .gc-promo {
+    margin-bottom: gc-spacing(5) + $gc-box-shadow-link; /* [1] */
+    width: 100%;
+  }
+  
+  .gc-promo__link-wrapper {
+    background-color: govuk-colour('light-grey');
+    border: 1px solid transparent;
+    box-shadow: 0 $gc-box-shadow-link 0 0 govuk-colour('mid-grey'); /* [2] */
+    display: block;
+    height: 100%; /* [3] */
+    position: relative; /* [4] */
+    text-decoration: none; /* [5] */
+  
+    &:focus {
+      background-color: govuk-colour('white');
+      box-shadow: 0 0 0 $gc-box-shadow-link govuk-colour('yellow');
+  
+      .gc-promo__heading {
+        text-decoration: underline; /* [6] */
+      }
+  
+      .gc-promo__heading,
+      .gc-promo__description {
+        color: govuk-colour('black');
+      }
+  
+    }
+  
+    &:hover {
+      background-color: govuk-colour('white');
+      box-shadow: 0 0 0 $gc-box-shadow-link govuk-colour('yellow');
+      color: $govuk-link-hover-colour;
+    }
+  
+    &:active {
+      background-color: govuk-colour('white'); /* [7] */
+      box-shadow: 0 0 0 $gc-box-shadow-link govuk-colour('yellow');
+      top: $gc-box-shadow-link; /* [7] */
+    }
+  
+    &:hover,
+    &:active {
+      .gc-promo__heading {
+        text-decoration: none;
+      }
+    }
+  
+  }
+  
+  .gc-promo__img {
+    @include print-hide();
+  
+    border-bottom: 1px solid govuk-colour('light-grey'); /* [8] */
+    display: block;
+    width: 100%;
+  
+  }
+  
+  .gc-promo__heading {
+    @include govuk-font(24, $weight: bold);
+  
+    margin-bottom: gc-spacing(3);
+    text-decoration: underline;
+  }
+  
+  .gc-promo__content {
+    @include top-and-bottom();
+    @include gc-responsive-padding(5);
+  }
+  
+  .gc-promo__description {
+    color: govuk-colour('black');
+    @include govuk-font(16, $weight: bold);
+  }
+  
+  /* Promo size variant
+     ========================================================================== */
+  
+  /**
+   * Promo small reduces the size of the text heading and description.
+   */
+  
+  .gc-promo--small {
+  
+    .gc-promo__heading {
+      @include govuk-font(19);
+    }
+  
+    .gc-promo__description {
+      @include govuk-font(16);
+    }
+  
+  }
+  
+  /* Promo group
+     ========================================================================== */
+  
+  /**
+   * Promo group allows you to have a row of promos.
+   *
+   * Flexbox is used to make each promo in a row the same height.
+   */
+  
+  .gc-promo-group {
+    @include flex();
+  
+    margin-bottom: gc-spacing(5) + $gc-box-shadow-link;
+  
+    @include mq($until: desktop) {
+      margin-bottom: gc-spacing(4) + $gc-box-shadow-link;
+    }
+  
+  }
+  
+  .gc-promo-group__item {
+    @include flex-item();
+  
+    @include mq($until: desktop) {
+      margin-bottom: gc-spacing(4) + $gc-box-shadow-link;
+  
+      &:last-child {
+        margin-bottom: 0;
+      }
+  
+    }
+  
+    .gc-promo {
+      margin-bottom: 0;
+    }
+  
+  }
+  

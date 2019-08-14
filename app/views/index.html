@@ -1,79 +1,100 @@
-
 {% extends "layout_hero.html" %}
 
 {% block pageTitle %}
-  GOV.UK Prototype Kit
+GOV.UK Prototype Kit
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-width-container">
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds">
+  <div class="govuk-grid-row">
 
-        <ul class="register-themes">
-          <li class="register-theme"><a class="register-theme__link" href="#">
-              <h3 class="register-theme__heading govuk-heading-s">Prevention and education</h3>
-              <p class="register-theme__description govuk-body-s">Towards a collective and clear prevention plan
-                applying the right mix of interventions
-              </p>
-            </a></li>
-          <li class="register-theme"><a class="register-theme__link" href="#">
-              <h3 class="register-theme__heading govuk-heading-s">Treatment and support</h3>
-              <p class="register-theme__description govuk-body-s">Significant progress towards truly national
-                treatment and support options that meet the needs of current and future service users
-              </p>
+    <div class="govuk-grid-column-full">
 
-            </a></li>
-          <li class="register-theme"><a class="register-theme__link" href="#">
-              <h3 class="register-theme__heading govuk-heading-s">Regulation and oversight
-              </h3>
-              <p class="register-theme__description govuk-body-s">Widespread adoption of best practice through
-                regulatory frameworks
-              </p>
-            </a></li>
-          <li class="register-theme"><a class="register-theme__link" href="#">
-              <h3 class="register-theme__heading govuk-heading-s">
-                Collaboration</h3>
-              <p class="register-theme__description govuk-body-s">Actions by businesses and other key organisations
-                support the delivery of the strategy and the reduction of gambling harms</p>
-            </a></li>
-          <li class="register-theme"><a class="register-theme__link" href="#">
-              <h3 class="register-theme__heading govuk-heading-s">
-                Evaluation</h3>
-              <p class="register-theme__description govuk-body-s">To understand more about what works to reduce
-                gambling harms</p>
-            </a></li>
-          <li class="register-theme"><a class="register-theme__link" href="#">
-              <h3 class="register-theme__heading govuk-heading-s">
-                Research to inform action</h3>
-              <p class="register-theme__description govuk-body-s">To widen the research base and improve links between
-                research and policy</p>
-            </a></li>
-        </ul>
 
-      </div>
-      <div class="govuk-grid-column-one-third">
-        <div class="gc-secondary">
-        <h3 class="govuk-heading-m">News</h3>
+      <div class="govuk-grid-row gc-promo-group">
+        <div class="govuk-grid-column-one-third gc-promo-group__item">
+          <div class="gc-promo app-promo--grey">
+            <a class="gc-promo__link-wrapper" href="/strategy">
 
-        <!-- {% for i in news.items %}
-
-        <div class="govuk-!-margin-bottom-3">
-            <h3 class="govuk-heading-s govuk-!-margin-bottom-1"> <a href="{{ i.fields.slug }}">
-                    {{i.fields.title}}</a></h3>
+              <div class="gc-promo__content">
+                <h3 class="gc-promo__heading">The strategy</h3>
+                <p class="gc-promo__description">Reducing gambling harms strategy</p>
+              </div>
             </a>
-            <p class="govuk-body-s gc-meta  govuk-!-margin-bottom-0">{{i.fields.publishedDateTime | date('DD MMMM YYYY')}}
-            </p>
+          </div>
+        </div>
+
+        <div class="govuk-grid-column-one-third gc-promo-group__item">
+          <div class="gc-promo app-promo--grey">
+            <a class="gc-promo__link-wrapper" href="/delivery">
+              <div class="gc-promo__content">
+                <h3 class="gc-promo__heading">Delivery</h3>
+                <p class="gc-promo__description">Delivering progress and actions through partnerships
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="govuk-grid-column-one-third gc-promo-group__item">
+
+          <div class="gc-promo app-promo--grey">
+            <a class="gc-promo__link-wrapper" href="#">
+              <img class="gc-promo__img" src="/public/images/chips.jpg" alt="#">
+              <div class="gc-promo__content">
+                <h3 class="gc-promo__heading">A long news title which is made up of exactly 60 characters.</h3>
+                <p class="gc-promo__description">18 June 2019</p>
+              </div>
+            </a>
+          </div>
         </div>
 
 
-        {% endfor %} -->
 
+
+        <div class="govuk-grid-column-one-half gc-promo-group__item">
+          <div class="gc-panel-with-label">
+            <h3 class="gc-panel-with-label__label">Maintain your licence</h3>
+            <p>You need to submit your maintenance application by 11 November 2019</p>
+            <button class="govuk-button">Start maintenance</button>
+          </div>
         </div>
       </div>
-
     </div>
   </div>
+</div>
+
+<section class="gc-hero">
+
+  <div class="govuk-width-container gc-hero--border">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <div class="gc-hero__wrapper">
+          <h1 class="govuk-heading-l govuk-!-margin-bottom-3">We’re here for you</h1>
+          <p class="govuk-body-l govuk-!-margin-bottom-0">Helping you take control of your health and wellbeing.</p>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<section class="gc-hero gc-hero--image gc-hero--image-description" style="background-image: url('https://assets.nhs.uk/prod/images/S_0818_homepage_hero_1_F0147446.width-1000.jpg');">
+  <div class="gc-hero__overlay">
+    <div class="govuk-width-container">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <div class="gc-hero-content">
+            <h1 class="govuk-heading-l govuk-!-margin-bottom-3">We’re here for you</h1>
+            <p class="govuk-body govuk-!-margin-bottom-0">Helping you take control of your health and wellbeing.</p>
+            <span class="gc-hero__arrow" aria-hidden="true"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
 
 {% endblock %}
