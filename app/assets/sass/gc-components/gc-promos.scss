@@ -132,6 +132,7 @@
   
   .gc-promo-group__item {
     @include flex-item();
+    margin-bottom: gc-spacing(4) + $gc-box-shadow-link;
   
     @include mq($until: desktop) {
       margin-bottom: gc-spacing(4) + $gc-box-shadow-link;

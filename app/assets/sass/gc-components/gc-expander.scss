@@ -1,0 +1,177 @@
+/* ==========================================================================
+   COMPONENTS / #DETAILS
+   ========================================================================== */
+
+/**
+ * Details component.
+ *
+ * Original code taken from GDS (Government Digital Service)
+ * https://github.com/alphagov/govuk-frontend
+ *
+ * 1. Style the summary to look like a link...
+ * 2. Make the focus outline shrink-wrap the text content of the summary
+ * 3. Absolutely position the marker against this element
+ * 3. Allow for absolutely positioned marker and align with disclosed text
+ * 4. Only underline the text, not the arrow
+ * 5. Remove the default details marker so we can style our own consistently and
+ *    ensure it displays in Firefox
+ */
+
+ .gc-details {
+    @include gc-responsive-margin(4, 'bottom');
+    @include govuk-font(16);
+    display: block;
+  }
+  
+  .gc-details__summary {
+    color: $color_gc-blue; /* [1] */
+    cursor: pointer;
+    display: inline-block; /* [2] */
+    padding-left: gc-spacing(4);
+    position: relative; /* [3] */
+  
+    @include gc-link-style-hover();
+    @include gc-link-style-focus();
+  
+    &:before {
+      bottom: 0;
+      content: '';
+      left: 0;
+      margin: auto;
+      position: absolute;
+      top: 0;
+  
+      @include govuk-shape-arrow($direction: right, $base: 14px);
+  
+    }
+  
+    &:focus {
+      box-shadow: 0 0 0 $gc-box-details $gc-link-focus-background-color;
+      color: $gc-link-focus-color;
+  
+      .gc-details__summary-text {
+        color: $gc-link-focus-color;
+      }
+    }
+  
+    &:hover {
+      background-color: $gc-link-hover-background-color;
+      box-shadow: 0 0 0 $gc-box-details $gc-link-hover-background-color;
+  
+      .gc-details__summary-text {
+        color: $gc-link-hover-color;
+        text-decoration: none;
+      }
+    }
+  }
+  
+  .gc-details[open] > .gc-details__summary:before {
+    @include govuk-shape-arrow($direction: down, $base: 14px);
+  }
+  
+  .gc-details__summary-text {
+    text-decoration: underline; /* [4] */
+  }
+  
+  .gc-details__summary::-webkit-details-marker {
+    display: none; /* [5] */
+  }
+  
+  .gc-details__text {
+    border-left: gc-spacing(1) solid $color_gc-grey-4;
+    margin-top: gc-spacing(2);
+    padding: gc-spacing(3);
+    padding-left: gc-spacing(4);
+    @include top-and-bottom();
+  
+    p {
+      margin-bottom: gc-spacing(4);
+      margin-top: 0;
+    }
+  
+  }
+  
+  /**
+   * Expander variation.
+   *
+   * 1. !important used because the icon is populated
+   *    by the JavaScript polyfill
+   * 2. Remove the default hover, focus and active
+   *    styles for this component.
+   * 3. -2px left margin to align the icon to the content.
+   * 4. When a group of details is used reduce the
+   *    margin between them so they sit together.
+   */
+  
+  .gc-expander {
+    background-color: $color_gc-white;
+  
+    .gc-details__summary {
+      @include gc-responsive-padding(4);
+      background-color: $color_gc-white;
+      display: block;
+  
+      &:before {
+        display: none !important; // sass-lint:disable-line no-important /* [1] */
+      }
+  
+      &:focus {
+        box-shadow: 0 0 0 $gc-box-expander $gc-link-focus-background-color;
+      }
+  
+      &:hover {
+        box-shadow: 0 0 0 $gc-box-expander $gc-link-hover-background-color;
+      }
+  
+      &:hover,
+      &:active,
+      &:focus { /* [2] */
+        outline: 0;
+      }
+  
+    }
+  
+    .gc-details__summary-text {
+      background: url("data:image/svg+xml,%3Csvg class='gc-icon gc-icon__plus' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden='true'%3E%3Ccircle cx='12' cy='12' r='10' fill='%23005eb8'%3E%3C/circle%3E%3Cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M12 8v8M8 12h8'%3E%3C/path%3E%3C/svg%3E%0A") left -2px center no-repeat; // sass-lint:disable-line quotes
+      background-size: 32px;
+      color: $color_gc-blue;
+      cursor: pointer;
+      display: block;
+      padding: gc-spacing(2) gc-spacing(2) gc-spacing(2) 38px;
+      position: relative;
+    }
+  
+    .gc-details__text {
+      @include gc-responsive-padding(4);
+      border-left: 0;
+      margin-left: 0;
+      margin-top: 0;
+    }
+  
+  }
+  
+  .gc-expander[open] {
+  
+    .gc-details__summary {
+      border-bottom: 1px solid $color_gc-grey-5;
+    }
+  
+    .gc-details__summary-text {
+      background: url("data:image/svg+xml,%3Csvg class='gc-icon gc-icon__minus' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden='true'%3E%3Ccircle cx='12' cy='12' r='10' fill='%23005eb8'%3E%3C/circle%3E%3Cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M8 12h8'%3E%3C/path%3E%3C/svg%3E%0A") left -2px center no-repeat; /* [3] */ // sass-lint:disable-line quotes
+      background-size: 32px;
+    }
+  
+  }
+  
+  .gc-expander-group { /* [4] */
+  
+    > .gc-details {
+      @include gc-responsive-margin(2, 'bottom');
+    }
+  
+    @include gc-responsive-margin(4, 'bottom');
+  }
+  
+  .gc-details  + %gc-heading-l {
+    @include gc-responsive-padding(4, 'top');
+  }
