@@ -90,19 +90,17 @@
 }
 
 .gc-vertical-nav--count{
-  float: right;
-  margin-top: 8px;
-  margin-right: 5px;
-  background: govuk-colour('mid-grey');
-  padding: 3px 4px 2px 4px;
-  border-radius: 2px;
-  color:govuk-colour("black");
-  font-weight: 700;
-  min-width: 20px;
-  text-align: center;
-  font-size: 12px;
-
-  font-family:"Oxygen", Arial;
+    float: right;
+    margin-top: 8px;
+    margin-right: 5px;
+    background: #dee0e2;
+    padding: 3px 4px 2px 4px;
+    border-radius: 2px;
+    color: #000000;
+    font-weight: 700;
+    min-width: 25px;
+    text-align: center;
+    font-size: 12px;
   }
 
 
