@@ -30,9 +30,11 @@
     text-decoration: none; /* [5] */
   
     &:focus {
-      background-color: govuk-colour('white');
-      box-shadow: 0 0 0 $gc-box-shadow-link govuk-colour('yellow');
-  
+      background-color: govuk-colour('yellow');    
+        box-shadow: 0px -2px #fd0, 0px 4px #0b0c0c;
+        text-decoration: none;
+    }
+    
       .gc-promo__heading {
         text-decoration: underline; /* [6] */
       }
@@ -45,8 +47,9 @@
     }
   
     &:hover {
-      background-color: govuk-colour('white');
-      box-shadow: 0 0 0 $gc-box-shadow-link govuk-colour('yellow');
+      background-color: govuk-colour('yellow');
+      box-shadow: 0px -2px #fd0, 0px 4px #0b0c0c;
+      text-decoration: none;
       color: $govuk-link-hover-colour;
     }
   
