@@ -30,11 +30,10 @@
     text-decoration: none; /* [5] */
   
     &:focus {
-      background-color: govuk-colour('yellow');    
-        box-shadow: 0px -2px #fd0, 0px 4px #0b0c0c;
-        text-decoration: none;
-    }
-    
+      background-color: govuk-colour('yellow');
+      box-shadow: 0px -2px #fd0, 0px 4px #0b0c0c;
+}
+
       .gc-promo__heading {
         text-decoration: underline; /* [6] */
       }
@@ -44,18 +43,17 @@
         color: govuk-colour('black');
       }
   
-    }
+    
   
     &:hover {
       background-color: govuk-colour('yellow');
-      box-shadow: 0px -2px #fd0, 0px 4px #0b0c0c;
-      text-decoration: none;
+      box-shadow: 0 0 0 $gc-box-shadow-link govuk-colour('black');
       color: $govuk-link-hover-colour;
     }
   
     &:active {
-      background-color: govuk-colour('white'); /* [7] */
-      box-shadow: 0 0 0 $gc-box-shadow-link govuk-colour('yellow');
+      background-color: govuk-colour('yellow');
+      box-shadow: 0 0 0 $gc-box-shadow-link govuk-colour('black');
       top: $gc-box-shadow-link; /* [7] */
     }
   
