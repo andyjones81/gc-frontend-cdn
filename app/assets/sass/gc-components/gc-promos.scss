@@ -31,7 +31,8 @@
   
     &:focus {
       background-color: govuk-colour('yellow');
-      box-shadow: 0px -2px #fd0, 0px 4px #0b0c0c;
+      box-shadow: 0 $gc-box-shadow-link 0 0 govuk-colour('black'); /* [2] */
+
 }
 
       .gc-promo__heading {
