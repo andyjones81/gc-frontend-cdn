@@ -30,8 +30,7 @@
     text-decoration: none; /* [5] */
   
     &:focus {
-      background-color: govuk-colour('yellow');
-      box-shadow: 0 $gc-box-shadow-link 0 0 govuk-colour('black'); /* [2] */
+      box-shadow: 0 0 0 $gc-box-shadow-link govuk-colour('yellow');
 
 }
 
@@ -47,14 +46,13 @@
     
   
     &:hover {
-      background-color: govuk-colour('yellow');
-      box-shadow: 0 $gc-box-shadow-link 0 0 govuk-colour('black'); /* [2] */
+      box-shadow: 0 0 0 $gc-box-shadow-link govuk-colour('yellow');
       color: $govuk-link-hover-colour;
     }
   
     &:active {
-      background-color: govuk-colour('yellow');
-      box-shadow: 0 $gc-box-shadow-link 0 0 govuk-colour('black'); /* [2] */
+      box-shadow: 0 0 0 $gc-box-shadow-link govuk-colour('yellow');
+      top: $gc-box-shadow-link; /* [7] */
     }
   
     &:hover,
