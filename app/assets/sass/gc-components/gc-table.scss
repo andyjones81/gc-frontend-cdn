@@ -13,8 +13,9 @@
   .gc-table__cell {
     background: govuk-colour('light-grey');
     @include govuk-font(16);
-    padding: 0;
+    padding: 15px;
     vertical-align: top;
+
   }
   
   .gc-table__header:last-child,
