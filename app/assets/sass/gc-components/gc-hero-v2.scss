@@ -39,7 +39,8 @@
         color: govuk-colour("white") !important
       }
      
-    .govuk-button{background:  govuk-colour("white"); color:  govuk-colour("black");}
+    .govuk-button{background:  govuk-colour("white"); color:  govuk-colour("black") !important;}
+    a.govuk-button{background:  govuk-colour("white"); color:  govuk-colour("black") !important;}
      
   }
   
