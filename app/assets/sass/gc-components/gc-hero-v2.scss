@@ -20,6 +20,26 @@
     .gc-hero--border { /* [2] */
       border-top: $gc-hero-border solid  $govuk-border-colour;
     }
+
+    .gc-hero {
+     
+      padding: 30px 0px 20px 0px;
+    
+      [class^="govuk-heading-"],
+      [class^="govuk-body-"],
+      .govuk-breadcrumbs__list-item,
+      .govuk-breadcrumbs__link,    
+      .govuk-label,
+      .govuk-back-link,
+      .govuk-link,
+      .govuk-caption-l,
+      a {
+        color: govuk-colour("white")    
+      }
+     
+  
+      .govuk-button{background:  govuk-colour("white"); color:  govuk-colour("black");}
+     } 
   }
   
   .gc-hero__wrapper {
