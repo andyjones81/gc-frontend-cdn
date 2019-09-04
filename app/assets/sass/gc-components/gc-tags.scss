@@ -1,3 +1,5 @@
 .gc-tag--active{background-color: govuk-colour("green") !important;}
-.gc-tag--inactive{background-color: govuk-colour("mid-grey") !important;}
+.gc-tag--inactive{background-color: govuk-colour("light-grey") !important; color: govuk-colour("black")}
 .gc-tag--done{background-color: govuk-colour("black") !important;}
+
+.gc-tag {font-weight: 400; border: 1px solid govuk-colour("mid-grey"); font-size: 14px;}
