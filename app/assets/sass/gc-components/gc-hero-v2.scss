@@ -21,7 +21,7 @@
       border-top: $gc-hero-border solid  $govuk-border-colour;
     }
 
-    .gc-hero {
+
      
       padding: 30px 0px 20px 0px;
     
@@ -37,9 +37,8 @@
         color: govuk-colour("white")    
       }
      
-  
-      .govuk-button{background:  govuk-colour("white"); color:  govuk-colour("black");}
-     } 
+    .govuk-button{background:  govuk-colour("white"); color:  govuk-colour("black");}
+     
   }
   
   .gc-hero__wrapper {
