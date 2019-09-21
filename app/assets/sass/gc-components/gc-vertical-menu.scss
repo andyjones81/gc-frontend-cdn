@@ -58,6 +58,7 @@
 .gc-vertical-nav__section-item--current{
   border-left:4px solid govuk-colour("blue");
   font-weight: 700;
+  background: #f3f2f1;
 }
 
 .gc-vertical-nav__link:hover, .gc-vertical-nav__link:focus, .gc-vertical-nav__link:active{
@@ -93,9 +94,9 @@
 
 .gc-vertical-nav--count{
     float: right;
-    margin-top: 8px;
-    margin-right: 5px;
-    background: #dee0e2;
+    margin-top: 7px;
+    margin-right: 7px;
+    background: #b1b4b6;
     padding: 3px 4px 2px 4px;
     border-radius: 2px;
     color: #000000;
