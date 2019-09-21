@@ -19,3 +19,11 @@
 .gc-text-capitalize {
     text-transform: capitalize
 }
+
+
+@media (min-width: 40.0625em) {
+    .govuk-fieldset__heading>.govuk-fieldset__legend--l,
+    .govuk-heading-l {
+      line-height: 1.28;
+    }
+  }

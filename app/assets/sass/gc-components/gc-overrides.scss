@@ -1,19 +1,19 @@
 .govuk-header {
-    background: $gcebony;
-  }
-
-  .govuk-header__container {
-    border-bottom: 10px solid $gcebonyshade;
+  background: $gcebony;
 }
 
-.gc-product-layout{
+.govuk-header__container {
+  border-bottom: 10px solid $gcebonyshade;
+}
+
+.gc-product-layout {
   .govuk-header__container {
     border-bottom: none;
+  }
 }
+
+
+.gc-logo-image {
+  max-width: 200px;
 }
 
-
-.gc-logo-image{max-width: 200px;}
-
-.govuk-fieldset__heading > .govuk-fieldset__legend--l, .govuk-heading-l{
-line-height: 1.28 !important;}
