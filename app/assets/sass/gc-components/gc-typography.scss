@@ -22,8 +22,8 @@
 
 
 @media (min-width: 40.0625em) {
-    .govuk-fieldset__heading>.govuk-fieldset__legend--l,
-    .govuk-heading-l {
-      line-height: 1.28;
+    .govuk-fieldset__heading > .govuk-fieldset__legend--l,
+    .govuk-heading-l, .govuk-fieldset__heading {
+      line-height: 1.28 !important;
     }
   }
