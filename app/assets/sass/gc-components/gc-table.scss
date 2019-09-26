@@ -32,7 +32,7 @@
   }
   
   .gc-table__header {
-    background: govuk-colour('mid-grey')
+    background: govuk-colour('mid-grey');
     @include govuk-font(16, $weight: bold);
   }
   
