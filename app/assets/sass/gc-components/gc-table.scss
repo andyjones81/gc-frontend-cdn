@@ -9,20 +9,21 @@
   .gc-table__row {
     border: 1px solid govuk-colour('white');
   }
-
-  .gc-table__header,
-  .gc-table__cell:first-of-type {
-    @include govuk-font(16, $weight: bold);
-  }
-  
-  .gc-table__header,
+.gc-table__header,
   .gc-table__cell {
     background: govuk-colour('light-grey');
     @include govuk-font(16);
     padding: 15px;
     vertical-align: top;
+    text-align: left;
 
   }
+  .gc-table__header,
+  .gc-table__cell:first-of-type {
+    @include govuk-font(16, $weight: bold);
+  }
+  
+  
   
   .gc-table__header:last-child,
   .gc-table__cell:last-child {
@@ -32,6 +33,7 @@
   
   .gc-table__header {
     background: govuk-colour('mid-grey')
+    @include govuk-font(16, $weight: bold);
   }
   
   .gc-table__header p {
