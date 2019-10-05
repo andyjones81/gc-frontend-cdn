@@ -1,4 +1,3 @@
-
 .gc-search * {
   box-sizing: border-box;
 }
@@ -168,20 +167,29 @@
   border-radius: 0px;
   padding: 15px;
   border-bottom: none;
-  }
+}
 
-  .gc-search-pagination-left{
-    border-left: 5px solid govuk-colour('mid-grey');
-    background: govuk-colour('light-grey');
-    padding: 10px 15px;
-    display: block;
-  }
+.gc-search-pagination-left {
+  border-left: 5px solid govuk-colour('mid-grey');
+  padding: 10px 15px;
+  display: block;
+  margin-bottom: 15px;
+}
 
-  
-  .gc-search-pagination-right{
-    border-right: 5px solid govuk-colour('mid-grey');
-    background: govuk-colour('light-grey');
-    padding: 10px 15px;
-    display: block;
+
+.gc-search-pagination-right {
+  border-right: 5px solid govuk-colour('mid-grey');
+  padding: 10px 15px;
+  display: block;
   text-align: right;
-  }
+  margin-bottom: 15px;
+}
+
+.gc-search-pagination-left:hover, .gc-search-pagination-right:hover{
+  background: govuk-colour('light-grey');
+}
+
+.gc-search-pagination-left:focus, .gc-search-pagination-right:focus {
+  background: govuk-colour('govuk-focus-colour ');
+}
+
