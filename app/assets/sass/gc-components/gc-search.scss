@@ -169,3 +169,19 @@
   padding: 15px;
   border-bottom: none;
   }
+
+  .gc-search-pagination-left{
+    border-left: 5px solid govuk-color('mid-grey');
+    background: govuk-color('light-grey');
+    padding: 10px 15px;
+    display: block;
+  }
+
+  
+  .gc-search-pagination-right{
+    border-right: 5px solid govuk-color('mid-grey');
+    background: govuk-color('light-grey');
+    padding: 10px 15px;
+    display: block;
+  text-align: right;
+  }
