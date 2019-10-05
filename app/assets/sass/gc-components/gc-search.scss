@@ -187,12 +187,12 @@
   margin-bottom: 15px;
 }
 
-.gc-search-pagination-left:hover, .gc-search-pagination-right:hover{
+.gc-search-pagination-left:hover, .gc-search-pagination-left:hover{
   background: govuk-colour('yellow');
   border-left: govuk-colour('black');
 }
 
-.gc-search-pagination-left:focus, .gc-search-pagination-right:focus {
+.gc-search-pagination-right:focus, .gc-search-pagination-right:focus {
   background: govuk-colour('yellow');
   border-right: govuk-colour('black');
 }
