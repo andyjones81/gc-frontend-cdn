@@ -170,7 +170,8 @@
 }
 
 .gc-search-pagination-left {
-  border-left: 5px solid govuk-colour('mid-grey');
+  border-left: 5px solid govuk-colour('blue');  
+  background: govuk-colour('light-grey');
   padding: 10px 15px;
   display: block;
   margin-bottom: 15px;
@@ -178,7 +179,8 @@
 
 
 .gc-search-pagination-right {
-  border-right: 5px solid govuk-colour('mid-grey');
+  border-right: 5px solid govuk-colour('blue');
+  background: govuk-colour('light-grey');
   padding: 10px 15px;
   display: block;
   text-align: right;
@@ -187,9 +189,11 @@
 
 .gc-search-pagination-left:hover, .gc-search-pagination-right:hover{
   background: govuk-colour('yellow');
+  border-left: govuk-colour('black');
 }
 
 .gc-search-pagination-left:focus, .gc-search-pagination-right:focus {
   background: govuk-colour('yellow');
+  border-right: govuk-colour('black');
 }
 
