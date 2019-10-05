@@ -189,11 +189,11 @@
 
 .gc-search-pagination-left:hover, .gc-search-pagination-left:focus{
   background: govuk-colour('yellow');
-  border-left: govuk-colour('black');
+  border-left: 5px solid govuk-colour('black');
 }
 
 .gc-search-pagination-right:hover, .gc-search-pagination-right:focus {
   background: govuk-colour('yellow');
-  border-right: govuk-colour('black');
+  border-right: 5px solid govuk-colour('black');
 }
 
