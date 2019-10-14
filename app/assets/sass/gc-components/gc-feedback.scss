@@ -1,0 +1,17 @@
+.gc-feedback-banner{
+    background:$gc-dark-blue;
+    color: govuk-colour("white");
+    @include govuk-font(16);
+    padding: 15px 0px;   
+
+    a{
+        font-weight: 700;
+        color: govuk-colour("white");
+
+    }
+
+    a:focus{
+        color: govuk-colour("black");
+        
+    }
+}
