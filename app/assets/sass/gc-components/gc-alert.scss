@@ -3,6 +3,9 @@
     padding: 15px 15px 0px 15px;
     box-shadow: none;
     margin-bottom: 15px;
+    display: block;
+    width: 100%;
+    background:  govuk-colour('white');
 }
 
 .gc-alert--info, .gc-notification--info {
