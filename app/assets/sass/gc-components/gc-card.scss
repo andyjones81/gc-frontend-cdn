@@ -1,135 +1,355 @@
-.register-themes {
-  padding-left:0px;
-  list-style: none;
+/* ==========================================================================
+   COMPONENTS / #PROMO
+
+   Use for promo boxes, news items
+   ========================================================================== */
+
+/**
+ * 1. Extra margin is added to compensate for the box-shadow.
+ * 2. Box shadow size is set within settings/_global.scss.
+ * 3. Makes the <a> fill the height of it's parent container.
+ * 4. Is needed for the :active top positioning.
+ * 5. Removes default <a> text underline from all elements.
+ * 6. Adds text underline to promo heading.
+ * 7. Creates the 'pressed down' effect when clicked.
+ * 8. Border is used to create a divider between the white content box and an image.
+ */
+
+ .gc-card {
+  margin-bottom: gc-spacing(5) + $gc-box-shadow-link;
+  /* [1] */
+  width: 100%;
+  background-color: govuk-colour('light-grey');
 }
-@media (min-width: 48.0625em) {
-    .register-themes {
-      display: flex;
-      flex-wrap: wrap;
-      margin-top: 0px;
-      padding-top: 0px;
-      padding-inline-start: 0px;
-      -moz-padding-inline-start: 0px;
-      -webkit-padding-inline-start: 0px;
-      -khtml-padding-inline-start: 0px;
-      -o-padding-inline-start: 0px;
-    }
-  
-    @supports (display: grid) {
-      .register-themes {
-        display: grid;
-        grid-column-gap: 1.5em;
-        grid-row-gap: 1.5em;
-        grid-template-columns: repeat(2, 1fr);
-        grid-auto-rows: minmax(5em, auto);
-        padding-bottom: 0;
-  
-        padding-inline-start: 0px;
-        -moz-padding-inline-start: 0px;
-        -webkit-padding-inline-start: 0px;
-        -khtml-padding-inline-start: 0px;
-        -o-padding-inline-start: 0px;
-      }
-    }
+
+.gc-card__link-wrapper {
+
+  border: 1px solid govuk-colour('mid-grey');
+  box-shadow: 0 $gc-box-shadow-link 0 0 govuk-colour('mid-grey');
+  /* [2] */
+  display: block;
+  height: 100%;
+  /* [3] */
+  position: relative;
+  /* [4] */
+  text-decoration: none;
+  /* [5] */
+
+  &:focus {
+    box-shadow: 0 0 0 $gc-box-shadow-link govuk-colour('yellow');
+
   }
-  
-  
-  .register-theme {
-    width: 100%;
-    padding: 0 0 10px;
+
+  .gc-card__heading {
+    text-decoration: underline;
+    /* [6] */
   }
-  
-  @media (min-width: 48.0625em) {
-    .register-theme {
-      display: inline-block;
-      vertical-align: top;
-      width: 32%
-    }
-  
-    .register-theme:nth-child(3n+1) {
-      margin-right: 2%
-    }
-  
-    .register-theme:nth-child(3n+3) {
-      margin-left: 2%
-    }
-  
-    @supports (display: grid) {
-      .register-theme {
-        width: 100%;
-        padding: 0
-      }
-  
-      .register-theme:nth-child(3n+1) {
-        margin-right: 0
-      }
-  
-      .register-theme:nth-child(3n+3) {
-        margin-left: 0
-      }
-    }
-  }
-  
-  .register-theme__link {
-    background:govuk-colour('light-grey');
-    border: 1px solid govuk-colour('dark-grey');
-    box-sizing: border-box;
-    display: block;
-    height: 100%;
-    margin: 0;
-    padding: 20px;
-    text-decoration: none;
-    align-content: flex-start;
-    align-items: stretch;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-  }
-  
-  .register-theme-secondary{
-    background: #ffffff;
-  }
-  
-  .register-theme__link:hover {
-    border: 1px solid govuk-colour('yellow');
-    box-shadow: 0 0 0 1px govuk-colour('yellow');
-  }
-  
-  .register-theme__heading,
-  .register-theme__description,
-  .register-theme__count {
-    pointer-events: none;
-    width: 100%;
+
+  .gc-card__heading,
+  .gc-card__description {
     color: govuk-colour('black');
-    
   }
-  
-  .register-theme__heading {
-    color: $govuk-link-colour;
-    text-decoration: underline;    
-    margin-bottom: 15px;
+
+}
+
+
+  .gc-card__content-panel{
+    background: govuk-colour('white');
+    @include top-and-bottom();
+    @include gc-responsive-padding(4);
   }
-  
-  .register-theme__description {
-    flex-grow: 5
+
+
+a.gc-card__link-wrapper {
+  &:hover {
+    box-shadow: 0 0 0 $gc-box-shadow-link govuk-colour('yellow');
+    color: $govuk-link-hover-colour;
   }
-  
-  .register-theme__count {
-    margin: 0
+
+  &:active {
+    box-shadow: 0 0 0 $gc-box-shadow-link govuk-colour('yellow');
+    top: $gc-box-shadow-link;
+    /* [7] */
   }
-  
-  .register-theme__view-all:link,
-  .register-theme__view-all:visited {
-    background: #005ea5;
-    color: #fff;
-    display: block;
-    font-weight: bold;
-    line-height: 1;
-    padding: 1em 1em 0.9em 1em;
-    text-decoration: none
+
+  &:hover,
+  &:active {
+    .gc-card__heading {
+      text-decoration: none;
+    }
   }
-  
-  .register-theme__view-all:link:hover,
-  .register-theme__view-all:visited:hover {
-    text-decoration: underline
+}
+
+.gc-card__img {
+  @include print-hide();
+
+  border-bottom: 1px solid govuk-colour('light-grey');
+  /* [8] */
+  display: block;
+  width: 100%;
+
+}
+
+.gc-card__heading {
+  @include govuk-font(24, $weight: bold);
+
+  margin-bottom: gc-spacing(3);
+  text-decoration: underline;
+}
+
+.gc-card__content {
+  @include top-and-bottom();
+  @include gc-responsive-padding(5);
+}
+
+.gc-card__description {
+  color: govuk-colour('black');
+  @include govuk-font(16);
+}
+
+/* Promo size variant
+     ========================================================================== */
+
+/**
+   * Promo small reduces the size of the text heading and description.
+   */
+
+.gc-card--small {
+
+  .gc-card__heading {
+    @include govuk-font(19);
   }
+
+  .gc-card__description {
+    @include govuk-font(16);
+  }
+
+}
+
+/* Promo group
+     ========================================================================== */
+
+/**
+   * Promo group allows you to have a row of promos.
+   *
+   * Flexbox is used to make each promo in a row the same height.
+   */
+
+.gc-card-group {
+  @include flex();
+
+  margin-bottom: gc-spacing(5) + $gc-box-shadow-link;
+
+  @include mq($until: desktop) {
+    margin-bottom: gc-spacing(4) + $gc-box-shadow-link;
+  }
+
+}
+
+.gc-card-group__item {
+  @include flex-item();
+  margin-bottom: gc-spacing(4) + $gc-box-shadow-link;
+
+  @include mq($until: desktop) {
+    margin-bottom: gc-spacing(4) + $gc-box-shadow-link;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+  }
+
+  .gc-card {
+    margin-bottom: 0;
+  }
+
+}
+
+
+.gc-card__content--thin {
+  padding: 15px !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.gc-card-with-actions {
+
+  margin-bottom: 2em;
+}
+
+@media screen and (min-width:600px) and (max-width:900px) {
+  .gc-card-with-actions {
+    flex-basis: 45.99%; // Every card in the first row needs horizontal margin
+
+    &:nth-child(2n-1) {
+      margin-right: 3%;
+    }
+
+    // Every card in the second row needs horizontal margin
+    &:nth-child(2n-2) {
+      margin-left: 3%;
+    }
+  }
+}
+
+@media screen and (min-width:900px) {
+  .gc-card-with-actions {
+    flex-basis: 31%;
+
+    &:nth-child(3n-1) {
+      margin-left: 3%;
+      margin-right: 3%;
+    }
+  }
+}
+
+html[data-useragent*='MSIE 10.0'] .flex-container {
+  .gc-card-with-actions {
+    flex-basis: 31%;
+    margin: 3%;
+  }
+}
+
+.gc-card-with-actions {
+  border: 1px solid govuk-colour('mid-grey');
+  font-size: 16px;
+  min-height: 150px;
+}
+
+.gc-card-with-actions .inactive {
+  color: govuk-colour('dark-grey');
+}
+
+.gc-card-with-actions .gc-card-with-actions-heading {
+  margin-top: 0;
+}
+
+.gc-card-with-actions .gc-card-with-actions-body {
+  box-shadow: 0 $gc-box-shadow-link 0 0 govuk-colour('mid-grey');
+  @include gc-responsive-padding(4);
+  background: govuk-colour('light-grey');
+  min-height: 60px;
+}
+
+.gc-card-with-actions .gc-card-with-actions-body:last-child {
+  margin-bottom: 0;
+}
+
+.gc-card-with-actions .gc-card-with-actions-body .detail-large {
+  color: govuk-colour('dark-grey');
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.gc-card-with-actions .gc-card-with-actions-body .detail {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.gc-card-with-actions-body.active {
+  background-color: govuk-colour('light-grey');
+  transition: .1s ease-in-out;
+}
+
+.gc-card-with-actions-action {
+  border-top: 0;
+  @include gc-responsive-padding(4);
+
+  ul {
+    margin: 0;
+
+    li {
+      margin: 0 0 5px 0;
+
+      a {
+        font-size: 14px;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.gc-card-with-actions-body.active.highlighted {
+  background-color: govuk-colour('blue');
+  color: govuk-colour('white');
+  transition: .1s ease-in-out;
+  transition-delay: .25s;
+
+  .gc-card-with-actions-heading,
+  p,
+  span {
+    color: govuk-colour('white');
+    transition: .1s ease-in-out;
+    transition-delay: .25s;
+  }
+
+  .gc-card-with-actions-heading a {
+    color: govuk-colour('white');
+    transition-delay: .25s;
+  }
+
+  .detail-large {
+    color: govuk-colour('white');
+    transition-delay: .25s;
+  }
+
+}
+
+
+
+
+.gc-card-with-actions-body.active {
+  &:hover {
+    transition: .1s ease-in-out;
+    transition-delay: .25s;
+
+    .gc-card-with-actions-heading,
+    p,
+    span {
+      transition: .1s ease-in-out;
+      transition-delay: .25s;
+    }
+
+    .gc-card-with-actions-heading a {
+      transition-delay: .25s;
+    }
+
+    .detail-large {
+      transition-delay: .25s;
+    }
+
+  }
+
+  a {
+    text-decoration: none;
+  }
+}

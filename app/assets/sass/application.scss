@@ -33,7 +33,6 @@ $govuk-assets-path: '/govuk/assets/';
 @import "gc-components/gc-hero-v2";
 @import "gc-components/gc-position";
 @import "gc-components/gc-secondary";
-@import "gc-components/gc-promos";
 @import "gc-components/gc-panel";
 @import "gc-components/gc-totop";
 @import "gc-components/gc-vertical-menu";
@@ -86,3 +85,5 @@ $govuk-assets-path: '/govuk/assets/';
 @import "gc-components/gc-search";
 @import "gc-components/gc-user-research";
 @import "gc-components/gc-currency";
+
+@import "gc-components/gc-card";
