@@ -1,6 +1,6 @@
 .gc-beta-banner{
     background:$gc-orange;
-    color: govuk-colour("white");
+    color: govuk-colour("black");
     @include govuk-font(16);
     padding: 15px 0px;
 
@@ -17,7 +17,7 @@
 
     a{
         font-weight: 700;
-        color: govuk-colour("white");
+        color: govuk-colour("black");
 
     }
 
