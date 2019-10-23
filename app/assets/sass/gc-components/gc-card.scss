@@ -219,7 +219,7 @@ a.gc-card__link-wrapper {
 
 @media screen and (min-width:900px) {
   .gc-card-with-actions {
-    flex-basis: 31%;
+    flex-basis: 100%;
 
     &:nth-child(3n-1) {
       margin-left: 3%;
@@ -230,7 +230,7 @@ a.gc-card__link-wrapper {
 
 html[data-useragent*='MSIE 10.0'] .flex-container {
   .gc-card-with-actions {
-    flex-basis: 31%;
+    flex-basis: 100%;
     margin: 3%;
   }
 }
