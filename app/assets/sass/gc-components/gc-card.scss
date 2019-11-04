@@ -19,6 +19,7 @@
   margin-bottom: gc-spacing(5) + $gc-box-shadow-link;
   /* [1] */
   width: 100%;
+  max-width: 100%;
   background-color: govuk-colour('light-grey');
 }
 
@@ -199,6 +200,7 @@ a.gc-card__link-wrapper {
 
 .gc-card-with-actions {
 
+  max-width: 100%;
   margin-bottom: 2em;
 }
 
