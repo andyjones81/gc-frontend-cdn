@@ -241,4 +241,4 @@ $(document).ready(function () {
 //   global.gc = gc
 // })(window)
 
-gc.details.init();
+//gc.details.init();
