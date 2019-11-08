@@ -1,5 +1,4 @@
 .gc-vertical-nav {
-  padding: 0px 15px 0 15px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
@@ -19,6 +18,7 @@
     font-size: 16px;
     font-size: 1rem;
     line-height: 1.25;
+    padding-left: 15px;
   }
 }
 
@@ -105,11 +105,11 @@
 
 .gc-vertical-nav--count {
   float: right;
-  margin-top: 6px;
-  margin-right: 7px;
+  //margin-top: 6px;
+  // margin-right: 7px;
   background: #b1b4b6;
-  padding: 4px;
-  border-radius: 2px;
+  padding: 9px 5px 9px 5px;
+  border-radius: 0px;
   color: #0b0c0c;
   font-weight: 700;
   min-width: 25px;
@@ -129,6 +129,11 @@
     font-size: 19px;
     font-size: 1.1875rem;
     line-height: 1.31579;
+  }
+
+
+  .gc-vertical-nav--count {
+    padding: 10px 5px 10px 5px;
   }
 }
 

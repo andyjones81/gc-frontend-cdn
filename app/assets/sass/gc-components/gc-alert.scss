@@ -1,8 +1,8 @@
 .gc-alert, .gc-notification {
     border: 5px solid $govuk-border-colour;
-    padding: 15px 15px 0px 15px;
+    padding: 15px 15px 5px 15px;
     box-shadow: none;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
     display: block;
     background:  govuk-colour('white');
 }
