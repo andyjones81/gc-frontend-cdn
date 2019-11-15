@@ -59,6 +59,7 @@
 
 .gc-vertical-nav__link:focus {
   background: inherit;
+
 }
 
 .gc-vertical-nav__section-item--current {
@@ -68,13 +69,20 @@
 }
 
 .gc-vertical-nav__link:hover,
-.gc-vertical-nav__link:focus,
 .gc-vertical-nav__link:active {
   color: govuk-colour("blue");
   border-left-color: govuk-colour("blue");
   text-decoration: none;
   box-shadow: none;
-  outline: none;
+  outline: none;  
+}
+
+.gc-vertical-nav__link:focus {  
+  background: govuk-colour("yellow");
+  color: govuk-colour("black");
+  text-decoration: none;
+  box-shadow: none;
+  outline: none;  
 }
 
 .gc-vertical-nav__section-item--current .gc-vertical-nav__link {
